@@ -31,7 +31,8 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems:'center'
+        alignItems:'center',
+        marginBottom: 20,
     },
     userImg: {
         width: 50,
