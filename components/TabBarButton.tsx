@@ -27,7 +27,7 @@ const TabBarButton = ({
   useEffect(() => {
     opacity.value = withSpring(
       typeof isFocused === "boolean" ? (isFocused ? 1 : 0) : isFocused,
-      { duration: 50 }
+      { duration: 50 },
     );
   }, [opacity, isFocused]);
 
