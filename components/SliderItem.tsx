@@ -14,7 +14,6 @@ type Props = {
 const { width } = Dimensions.get("screen");
 
 const SliderItem = ({ slideItem }: Props) => {
-  
   return (
     <View style={styles.itemWrapper} key={slideItem.article_id}>
       <Image source={{ uri: slideItem.image_url }} style={styles.image} />

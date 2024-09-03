@@ -1,6 +1,18 @@
 import React, { useState } from "react";
-import { FlatList, StyleSheet, Text, View, TouchableOpacity, Dimensions } from "react-native";
-import Animated, { useAnimatedRef, useAnimatedScrollHandler, useSharedValue, runOnJS } from "react-native-reanimated";
+import {
+  FlatList,
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  Dimensions,
+} from "react-native";
+import Animated, {
+  useAnimatedRef,
+  useAnimatedScrollHandler,
+  useSharedValue,
+  runOnJS,
+} from "react-native-reanimated";
 import { Colors } from "@/constants/Colors";
 import { NewsDataType } from "@/types";
 import SliderItem from "@/components/SliderItem";
@@ -52,7 +64,10 @@ const BreakingNews = ({ newsList }: Props) => {
       </View>
       <View style={styles.paginationWrapper}>
         {newsList.map((_, index) => (
-          <TouchableOpacity key={`dot-${index}`} onPress={() => scrollToIndex(index)}>
+          <TouchableOpacity
+            key={`dot-${index}`}
+            onPress={() => scrollToIndex(index)}
+          >
             <View
               style={[
                 styles.dot,
@@ -96,7 +111,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 5,
   },
   activeDot: {
-    backgroundColor: Colors.black,
+    backgroundColor: Colors.tabIconSelected,
     width: 10,
     height: 10,
   },
